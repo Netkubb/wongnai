@@ -4,15 +4,16 @@ import {Box,Grid} from '@mui/material'
 import Header from '../comps/Header'
 import Navbar from '../comps/Navbar'
 import styles from '../styles/Home.module.css'
+import LeftBar from '../comps/LeftBar'
 
 export default function Home() {
   return (<>
     <Header/>
     <Navbar/>
-    <Box style={{backgroundColor:"#EDF0F2"}}>
+    <Box style={{backgroundColor:"#EDF0F2",padding:"5vh 0"}}>
       <Grid container columnSpacing={2} style={{width:"80vw",display:"flex",justifyContent:"center",margin:"auto"}}>
-        <Grid item xs={2} style={{backgroundColor:"white",borderRadius:"5px"}}>
-          <div>1</div>
+        <Grid item xs={2} style={{backgroundColor:"white",borderRadius:"5px",padding:"0"}}>
+          <LeftBar/>
         </Grid>
         <Grid item xs={10}>
           <Grid container rowGap={2} direction={"row"}>
