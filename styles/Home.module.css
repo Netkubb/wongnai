@@ -108,10 +108,19 @@
   margin-left: 0.5rem;
 }
 
+.wongnaiIcon{
+  width:118px;
+  height:48px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .wongnaiIcon{
+    width:75px;
+    height:30px;
   }
 }
 
