@@ -13,7 +13,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default function Header() {
   return (
     <Box>
-      <AppBar color={"transparent"} position="static" style={{paddingLeft:"10vw",paddingRight:"10vw"}}  >
+      <AppBar color={"transparent"} position="static" style={{paddingLeft:"10vw",paddingRight:"10vw",boxShadow: "none",borderBottom:"1px solid #EAEAEA"}}  >
         <Toolbar>
             <img src='https://static2.wongnai.com/static2/images/HTZaHLM.png' className={styles.wongnaiIcon}/>
             <Input
