@@ -12,7 +12,6 @@ import RightSecondBody from '../comps/RightSecondBody'
 import RightThirdBody from '../comps/RightThirdBody'
 import RightLastBody from '../comps/RightLastBody'
 
-const n = 20;
 
 export default function Home() {
   return (<>
@@ -31,10 +30,8 @@ export default function Home() {
             <Grid item xs={12}>
               <Grid container columns={240}>
                 <Grid item xs={180} style={{borderRadius:"5px",marginRight:"1vw"}}>
-                  {[...Array(10)].map((m) => <CardBody/>)}
+                  {[...Array(10)].map((key,value) => <CardBody key={value}/>)}
                 </Grid>
-                {/* <Grid item xs={1}>
-                </Grid> */}
                 <Grid item xs={56} style={{borderRadius:"5px"}}>
                   <Grid container rowGap={2}>
                     <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
@@ -48,7 +45,7 @@ export default function Home() {
                         <Typography flexGrow={1}><b>บทความแนะนำ</b></Typography>
                         <Typography color="primary">ดูทั้งหมด</Typography>
                       </div>
-                      {[...Array(5)].map((m) => <RightThirdBody/>)}
+                      {[...Array(5)].map((key,value) => <RightThirdBody key={value}/>)}
                       
                     </Grid>
                     <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
@@ -56,7 +53,7 @@ export default function Home() {
                         <Typography flexGrow={1}><b>รวมลิสต์แนะนำที่คุณต้องลอง</b></Typography>
                         <Typography color="primary">ดูทั้งหมด</Typography>
                       </div>
-                      {[...Array(5)].map((m) => <RightLastBody/>)}
+                      {[...Array(10)].map((key,value) => <RightLastBody key={value}/>)}
                     </Grid>
                   </Grid>
                 </Grid>

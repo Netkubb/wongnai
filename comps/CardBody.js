@@ -1,8 +1,7 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea,Button } from '@mui/material';
+import { Button } from '@mui/material';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 
@@ -19,11 +18,10 @@ const props = {
 export default function CardBody(){
     return (
         <Card sx={{ width:"100%",marginBottom:"1rem",paddingTop:"1rem",minHeight:"300px" }}>
-          <CardActionArea>
             <div style={{display:"flex",justifyContent:"center"}}>
                 {
                     props.image.map((data) => 
-                    <img id={data}
+                    <img key={data}
                     src={data}
                     style={{width:"15%",height:"80px",margin:"auto auto"}}
                     />
@@ -54,7 +52,6 @@ export default function CardBody(){
                     <Button variant='contained'>สั่ง</Button>
               </div>
             </CardContent>
-          </CardActionArea>
         </Card>
       );
 }
