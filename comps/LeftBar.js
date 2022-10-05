@@ -7,11 +7,11 @@ import Divider from '@mui/material/Divider';
 import {Typography,Input,Box,Select,MenuItem,Checkbox } from '@mui/material'
 import { useState } from 'react';
 
-const distance = ["","500 ม.","1 กม.","2 กม."]
+const distance = ["500 ม.","1 กม.","2 กม."]
 const foodType = ["อาหารตามสั่ง","อาหารจานเดียว","ก๋วยเตี๋ยว","ของหวาน","เครื่องดื่ม/ผลไม้","เบเกอรี่/เค้ก"]
 
 export default function LeftBar() {
-    const [dis, setDis] = useState('');
+    const [dis, setDis] = useState("500 ม.");
 
     const handleChange = (event) => {
         setDis(event.target.value);
@@ -51,7 +51,7 @@ export default function LeftBar() {
             placeholder='เช่น วัดพระแก้ว'
             style={{border:"1px solid #EAEAEA",borderRadius:"3px"}}
             />
-            <FormControl fullWidth>
+            <FormControl sx={{width:"80%"}}>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"

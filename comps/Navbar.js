@@ -19,8 +19,8 @@ export default function Navbar(){
                     </Link>
                     <Typography color="text.primary">ค้นหาร้านอาหาร</Typography>
                 </Breadcrumbs>
-                <Typography variant='h5' style={{paddingTop:"1vh"}}>
-                    <b>ร้านอาหาร ยอดนิยม</b>
+                <Typography variant='h2' style={{paddingTop:"1vh"}}>
+                    ร้านอาหาร ยอดนิยม
                 </Typography>
             </AppBar>
         </Box>
