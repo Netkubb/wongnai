@@ -6,6 +6,9 @@ import Navbar from '../comps/Navbar'
 import styles from '../styles/Home.module.css'
 import LeftBar from '../comps/LeftBar'
 import TopBody from '../comps/TopBody'
+import CardBody from '../comps/CardBody'
+
+const n = 20;
 
 export default function Home() {
   return (<>
@@ -23,12 +26,12 @@ export default function Home() {
             </Grid>
             <Grid item xs={12}>
               <Grid container>
-                <Grid item xs={7} style={{backgroundColor:"white",borderRadius:"5px"}}>
-                  <div>3</div>
+                <Grid item xs={8} style={{borderRadius:"5px"}}>
+                  {[...Array(n)].map((m) => <CardBody/>)}
                 </Grid>
                 <Grid item xs={1}>
                 </Grid>
-                <Grid item xs={4} style={{backgroundColor:"red",borderRadius:"5px"}}>
+                <Grid item xs={3} style={{backgroundColor:"red",borderRadius:"5px"}}>
                   <div>4</div>
                 </Grid>
               </Grid>
