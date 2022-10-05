@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import {Box,Grid} from '@mui/material'
+import {Box,Grid,Typography} from '@mui/material'
 import Header from '../comps/Header'
 import Navbar from '../comps/Navbar'
 import styles from '../styles/Home.module.css'
@@ -9,6 +9,8 @@ import TopBody from '../comps/TopBody'
 import CardBody from '../comps/CardBody'
 import RightTopBody from '../comps/RightTopBody'
 import RightSecondBody from '../comps/RightSecondBody'
+import RightThirdBody from '../comps/RightThirdBody'
+import RightLastBody from '../comps/RightLastBody'
 
 const n = 20;
 
@@ -29,7 +31,7 @@ export default function Home() {
             <Grid item xs={12}>
               <Grid container columns={240}>
                 <Grid item xs={180} style={{borderRadius:"5px",marginRight:"1vw"}}>
-                  {[...Array(n)].map((m) => <CardBody/>)}
+                  {[...Array(10)].map((m) => <CardBody/>)}
                 </Grid>
                 {/* <Grid item xs={1}>
                 </Grid> */}
@@ -41,11 +43,20 @@ export default function Home() {
                     <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                       <RightSecondBody/>
                     </Grid>
-                    <Grid item xs={12} style={{backgroundColor:"red",borderRadius:"5px"}}>
-                      <div>3</div>
+                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                      <div style={{display:"flex",padding:"10px"}}>
+                        <Typography flexGrow={1}><b>บทความแนะนำ</b></Typography>
+                        <Typography color="primary">ดูทั้งหมด</Typography>
+                      </div>
+                      {[...Array(5)].map((m) => <RightThirdBody/>)}
+                      
                     </Grid>
-                    <Grid item xs={12} style={{backgroundColor:"red",borderRadius:"5px"}}>
-                      <div>4</div>
+                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                    <div style={{display:"flex",padding:"10px"}}>
+                        <Typography flexGrow={1}><b>รวมลิสต์แนะนำที่คุณต้องลอง</b></Typography>
+                        <Typography color="primary">ดูทั้งหมด</Typography>
+                      </div>
+                      {[...Array(5)].map((m) => <RightLastBody/>)}
                     </Grid>
                   </Grid>
                 </Grid>
