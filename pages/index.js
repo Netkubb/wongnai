@@ -5,6 +5,7 @@ import Header from '../comps/Header'
 import Navbar from '../comps/Navbar'
 import styles from '../styles/Home.module.css'
 import LeftBar from '../comps/LeftBar'
+import TopBody from '../comps/TopBody'
 
 export default function Home() {
   return (<>
@@ -17,8 +18,8 @@ export default function Home() {
         </Grid>
         <Grid item xs={10}>
           <Grid container rowGap={2} direction={"row"}>
-            <Grid item xs={12} style={{backgroundColor:"black",borderRadius:"5px",height:"134px"}}>
-              <div>2</div>
+            <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px",height:"134px"}}>
+              <TopBody/>
             </Grid>
             <Grid item xs={12}>
               <Grid container>
