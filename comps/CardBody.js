@@ -18,7 +18,7 @@ const props = {
 
 export default function CardBody(){
     return (
-        <Card sx={{ width:"100%",margin:"1rem auto",paddingTop:"1rem",minHeight:"300px" }}>
+        <Card sx={{ width:"100%",marginBottom:"1rem",paddingTop:"1rem",minHeight:"300px" }}>
           <CardActionArea>
             <div style={{display:"flex",justifyContent:"center"}}>
                 {

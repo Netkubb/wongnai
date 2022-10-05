@@ -27,13 +27,13 @@ export default function Home() {
               <TopBody/>
             </Grid>
             <Grid item xs={12}>
-              <Grid container>
-                <Grid item xs={8} style={{borderRadius:"5px"}}>
+              <Grid container columns={240}>
+                <Grid item xs={180} style={{borderRadius:"5px",marginRight:"1vw"}}>
                   {[...Array(n)].map((m) => <CardBody/>)}
                 </Grid>
-                <Grid item xs={1}>
-                </Grid>
-                <Grid item xs={3} style={{borderRadius:"5px"}}>
+                {/* <Grid item xs={1}>
+                </Grid> */}
+                <Grid item xs={56} style={{borderRadius:"5px"}}>
                   <Grid container rowGap={2}>
                     <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                       <RightTopBody/>
