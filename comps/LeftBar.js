@@ -17,7 +17,7 @@ export default function LeftBar() {
         setDis(event.target.value);
     };
 
-  return (<>
+  return (<div style={{backgroundColor:"white"}}>
         <FormControl style={{paddingLeft:"20px"}}>
             <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
@@ -91,5 +91,5 @@ export default function LeftBar() {
                     <FormControlLabel key={data}value={data} control={<Checkbox  />} label={<Typography variant='caption'>{data}</Typography>} />
                 )}
         </FormControl>
-    </>);
+    </div>);
 }
