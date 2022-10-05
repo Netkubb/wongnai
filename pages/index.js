@@ -19,28 +19,28 @@ export default function Home() {
     <Navbar/>
     <Box style={{backgroundColor:"#EDF0F2",padding:"5vh 0"}}>
       <Grid container columnSpacing={2} style={{width:"80vw",display:"flex",justifyContent:"center",margin:"auto"}}>
-        <Grid item xs={2} style={{borderRadius:"5px",padding:"0"}}>
+        <Grid item md={2} xs={12} style={{borderRadius:"5px",padding:"0"}}>
           <LeftBar/>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item md={10} xs={12}>
           <Grid container rowGap={2} direction={"row"}>
-            <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px",height:"134px"}}>
+            <Grid item md={12} xs={12} style={{backgroundColor:"white",borderRadius:"5px",height:"134px"}}>
               <TopBody/>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item md={12} xs={12}>
               <Grid container columns={240}>
-                <Grid item xs={180} style={{borderRadius:"5px",marginRight:"1vw"}}>
+                <Grid item md={180} xs={240} style={{borderRadius:"5px",marginRight:"1vw"}}>
                   {[...Array(10)].map((key,value) => <CardBody key={value}/>)}
                 </Grid>
-                <Grid item xs={56} style={{borderRadius:"5px"}}>
+                <Grid item md={56} xs={240} style={{borderRadius:"5px"}}>
                   <Grid container rowGap={2}>
-                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                    <Grid item md={12} xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                       <RightTopBody/>
                     </Grid>
-                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                    <Grid item md={12} xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                       <RightSecondBody/>
                     </Grid>
-                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                    <Grid item md={12} xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                       <div style={{display:"flex",padding:"10px"}}>
                         <Typography flexGrow={1}><b>บทความแนะนำ</b></Typography>
                         <Typography color="primary">ดูทั้งหมด</Typography>
@@ -48,7 +48,7 @@ export default function Home() {
                       {[...Array(5)].map((key,value) => <RightThirdBody key={value}/>)}
                       
                     </Grid>
-                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                    <Grid item md={12} xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
                     <div style={{display:"flex",padding:"10px"}}>
                         <Typography flexGrow={1}><b>รวมลิสต์แนะนำที่คุณต้องลอง</b></Typography>
                         <Typography color="primary">ดูทั้งหมด</Typography>
