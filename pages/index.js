@@ -7,6 +7,8 @@ import styles from '../styles/Home.module.css'
 import LeftBar from '../comps/LeftBar'
 import TopBody from '../comps/TopBody'
 import CardBody from '../comps/CardBody'
+import RightTopBody from '../comps/RightTopBody'
+import RightSecondBody from '../comps/RightSecondBody'
 
 const n = 20;
 
@@ -16,7 +18,7 @@ export default function Home() {
     <Navbar/>
     <Box style={{backgroundColor:"#EDF0F2",padding:"5vh 0"}}>
       <Grid container columnSpacing={2} style={{width:"80vw",display:"flex",justifyContent:"center",margin:"auto"}}>
-        <Grid item xs={2} style={{backgroundColor:"white",borderRadius:"5px",padding:"0"}}>
+        <Grid item xs={2} style={{borderRadius:"5px",padding:"0"}}>
           <LeftBar/>
         </Grid>
         <Grid item xs={10}>
@@ -31,8 +33,21 @@ export default function Home() {
                 </Grid>
                 <Grid item xs={1}>
                 </Grid>
-                <Grid item xs={3} style={{backgroundColor:"red",borderRadius:"5px"}}>
-                  <div>4</div>
+                <Grid item xs={3} style={{borderRadius:"5px"}}>
+                  <Grid container rowGap={2}>
+                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                      <RightTopBody/>
+                    </Grid>
+                    <Grid item xs={12} style={{backgroundColor:"white",borderRadius:"5px"}}>
+                      <RightSecondBody/>
+                    </Grid>
+                    <Grid item xs={12} style={{backgroundColor:"red",borderRadius:"5px"}}>
+                      <div>3</div>
+                    </Grid>
+                    <Grid item xs={12} style={{backgroundColor:"red",borderRadius:"5px"}}>
+                      <div>4</div>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
